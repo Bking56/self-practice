@@ -154,7 +154,7 @@ console.log(`item2 = ${item2}`);
 
 const l1 = {
     isbn: 1234,
-    title: 'JS',
+    title: 'java',
     authors: {
         firstname: 'Jon',
         lastname: 'Smith'
