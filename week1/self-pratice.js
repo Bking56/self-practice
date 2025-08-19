@@ -22,7 +22,6 @@ console.log("กลุ่ม A:", groupA);
 let upperNames = students.map(name => name.toUpperCase());
 console.log("ชื่อพิมพ์ใหญ่:", upperNames);
 
-// ✅ การใช้ filter() – คัดเอาชื่อที่มีความยาวมากกว่า 3 ตัวอักษร
 let longNames = students.filter(name => name.length > 3);
 console.log("ชื่อที่ยาวกว่า 3 ตัว:", longNames);
 

@@ -1,0 +1,8 @@
+เรียนเกี่ยวกับ การสร้าง object แบบ literalการเข้าถึงข้อมูลใน objectmethod ภายใน objectobject ซ้อน object/arrayการเพิ่ม/ลบ propertyการใช้ this
+การใช้ for...in loop
+Constructor functio Class
+Object.create()
+เปรียบเทียบ object
+การ destructuring
+การใช้ Object.keys
+ประมาณนี้
