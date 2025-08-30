@@ -16,6 +16,32 @@
 // // }
 // // function dosomething() {
 // //     return saygoodbye
+
+// function greet(name) {
+//     return `Hello, ${name}!`;
+// }
+
+// function processName(fn, name) {
+//     return fn(name);
+// }
+
+// console.log(processName(greet, "Alice"));  
+
+
+
+// function multiplyBy(factor) {
+//     return function(number) {
+//         return number * factor;
+//     };
+// }
+
+// const multiplyBy2 = multiplyBy(2);
+// const multiplyBy3 = multiplyBy(3);
+
+// console.log(multiplyBy2(5));  // 10
+// console.log(multiplyBy3(5));  // 15
+
+
     
 // // }
 // // let a = dosomething()
