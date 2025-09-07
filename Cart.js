@@ -21,26 +21,50 @@
 // Example:
 
 
-class Cart {
-    constructor() {
-        items = []
-        
+// Cart.js
+import Product from './Product.js';
+
+export default class Cart {
+  constructor() {
+    this.items = [];
+  }
+
+  findItemIndex(productName) {
+    return this.items.findIndex(
+      item => item.name.toLowerCase() === productName.toLowerCase()
+    );
+  }
+
+  addItem(newProduct) {
+    const index = this.findItemIndex(newProduct.name);
+    const quantityToAdd = newProduct.quantity < 0 ? 0 : newProduct.quantity;
+
+    if (index >= 0) {
+      this.items[index].quantity += quantityToAdd;
+    } else {
+      this.items.push(new Product(newProduct.name, newProduct.price, quantityToAdd));
     }
-    findItemIndex(productName) {
-       return items.findIndex((item) => item.name === productName)}
-    addItem(product){
-        return items.push((product))}
-    removeItem(product){
-         items.findIndex((product) => )}
+  }
 
+  removeItem(productName) {
+    const index = this.findItemIndex(productName);
+    if (index >= 0) {
+      this.items.splice(index, 1);
     }
-    
-    
-    
+  }
 
-       
+  calculateTotal() {
+    return this.items.reduce((total, item) => total + item.price * item.quantity, 0);
+  }
 
-    
-
+  getItems() {
+   
+    return this.items.map(item => ({
+      name: item.name,
+      price: item.price,
+      quantity: item.quantity
+    }));
+  }
+}
 
 
